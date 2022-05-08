@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: soahn <soahn@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: soahn <soahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 17:01:40 by soahn             #+#    #+#             */
-/*   Updated: 2021/05/06 12:24:59 by soahn            ###   ########.fr       */
+/*   Updated: 2022/04/16 15:17:08 by soahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ size_t	cnt_num(int n)
 	return (cnt);
 }
 
-int		ft_abs(int n)
+int	ft_abs(int n)
 {
 	if (n < 0)
 		return (-n);

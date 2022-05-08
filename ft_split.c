@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: soahn <soahn@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: soahn <soahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 07:52:09 by soahn             #+#    #+#             */
-/*   Updated: 2021/05/06 09:36:49 by soahn            ###   ########.fr       */
+/*   Updated: 2022/04/16 15:20:16 by soahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,8 @@ char	**ft_split(char const *s, char c)
 	size_t	next_str_len;
 
 	cnt = check_word(s, c);
-	if (!(out = (char **)malloc(sizeof(char *) * (cnt + 1))))
+	out = (char **)malloc(sizeof(char *) * (cnt + 1));
+	if (!out)
 		return (NULL);
 	i = 0;
 	from = (char *)s;
@@ -72,7 +73,8 @@ char	**ft_split(char const *s, char c)
 	while (i < cnt)
 	{
 		next_str_len = get_next_str(&from, next_str_len, c);
-		if (!(out[i] = (char *)malloc(sizeof(char) * (next_str_len + 1))))
+		out[i] = (char *)malloc(sizeof(char) * (next_str_len + 1));
+		if (!out[i])
 			return (malloc_error(out, i));
 		ft_strlcpy(out[i++], from, (next_str_len + 1));
 	}

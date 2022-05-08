@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: soahn <soahn@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: soahn <soahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 15:03:42 by soahn             #+#    #+#             */
-/*   Updated: 2021/05/04 14:59:01 by soahn            ###   ########.fr       */
+/*   Updated: 2022/04/16 15:16:40 by soahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isspace(char *str)
+int	ft_isspace(const char *str)
 {
 	int	i;
 
@@ -20,7 +20,7 @@ int		ft_isspace(char *str)
 	return (i);
 }
 
-int		ten_power(int i)
+int	ten_power(int i)
 {
 	int	res;
 
@@ -30,7 +30,7 @@ int		ten_power(int i)
 	return (res);
 }
 
-int		ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int		sign;
 	int		i;
